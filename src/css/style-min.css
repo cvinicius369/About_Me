@@ -25,8 +25,7 @@
   --green-color: rgb(7, 219, 0);
 }
 body {
-  /*background-color: var(--main-bg-color);*/
-  background-image: url('https://miro.medium.com/v2/resize:fit:1280/1*czcdGNhz6jvyxSRvmuxlSQ.gif');
+  background-color: var(--main-bg-color);
   color: var(--white-color);
   font-family: "Poppins Extra Light";
 }
