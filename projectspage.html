@@ -1,11 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Projects</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Caio Vinicius - All Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            /*background-color: #0d0d0d;*/
+            background-image: url("https://i.pinimg.com/originals/c5/9a/d2/c59ad2bd4ad2fbacd04017debc679ddb.gif");
+            color: #00ff00;
+        }
+        header {
+            background-color: #131313;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 2px solid #00ff00;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            color: #00ff00;
+            letter-spacing: 3px;
+        }
+        header p {
+            color: #b3ffb3;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .project-item {
+            background-color: #1a1a1a;
+            border: 2px solid #00ff00;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.4s ease, height 0.4s ease, box-shadow 0.4s ease;
+            height: 180px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .project-item.expanded {
+            height: auto;
+        }
+        .project-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.9);
+        }
+        .project-item h3 {
+            color: #00ff00;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            transition: color 0.4s ease;
+        }
+        .project-item p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #b3ffb3;
+        }
+        .project-item .more-info {
+            display: none;
+        }
+        .project-item.expanded .more-info {
+            display: block;
+        }
+        .project-item a {
+            text-decoration: none;
+            color: #00ff00;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .project-item a:hover {
+            color: #ffffff;
+        }
+        .project-item i {
+            margin-right: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #00ff00;
+            margin-top: 40px;
+            color: #b3ffb3;
+        }
+        .toggle-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00ff00;
+            color: #0d0d0d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .toggle-button:hover {
+            background-color: #ffffff;
+            color: #0d0d0d;
+        }
+        .list_skills { list-style: none;}
+    </style>
 </head>
 <body>
-    
+
+<header>
+    <h1>All Projects of Caio Vinicius</h1>
+    <p>Explorando Tecnologias Inovadoras</p>
+</header>
+
+<div class="container">
+    <div class="project-list">
+        <div class="project-item" onclick="toggleProject(this)">
+            <h3><i class="fas fa-dragon"></i> Black Dragon</h3>
+            <p>Pagina web para leitura, com o tema em romance, fantasia e terror...</p>
+            <div class="more-info">
+                <p>Livros disponiveis em PDF e EPUB.</p>
+                <h5>Tech Stakcs: </h5>
+                <ul>
+                    <li class="list_skills">HTML, CSS</li>
+                    <li class="list_skills">JavaScript</li>
+                </ul><br>
+                <a href="https://black-dragon-aqe1czxw6-vinicius182102gmailcoms-projects.vercel.app" target="_blank">Ver pagina</a>
+            </div>
+            <span class="toggle-button">Ver Mais</span>
+        </div>
+        <div class="project-item" onclick="toggleProject(this)">
+            <h3><i class="fas fa-brain"></i> Cyber Brain</h3>
+            <p>Prototipo de cerebro cibernetico que tenta se assemlhar...</p>
+            <div class="more-info">
+                <p>a um neuronio humano real.</p>
+                <h5>Tech Stakcs: </h5>
+                <ul>
+                    <li class="list_skills">C/C++</li>
+                    <li class="list_skills">Vector, Weigths and Bias</li>
+                </ul><br>
+                <a href="https://github.com/cvinicius369/Cyber-Brain" target="_blank">Ver no GitHub</a>
+            </div>
+            <span class="toggle-button">Ver Mais</span>
+        </div>
+        <div class="project-item" onclick="toggleProject(this)">
+            <h3><i class="fas fa-skull-crossbones"></i> Attack Ino</h3>
+            <p>Projeto arduino que verifica frequencias de drones...</p>
+            <div class="more-info">
+                <p>Ao atingir a frequencia correta do drone o arduino toma controle do mesmo.</p>
+                <h5>Tech Stakcs: </h5>
+                <ul>
+                    <li class="list_skills">C/C++</li>
+                    <li class="list_skills">Arduino</li>
+                </ul><br>
+                <a href="https://github.com/cvinicius369/Attack_Ino" target="_blank">Ver no GitHub</a>
+            </div>
+            <span class="toggle-button">Ver Mais</span>
+        </div>
+        <div class="project-item" onclick="toggleProject(this)">
+            <h3><i class="fas fa-database"></i> Leitor CSV</h3>
+            <p>Software que compara dados em duas planilhas e cria uma terceira com os dados coletados ou não...</p>
+            <div class="more-info">
+                <p>Projeto feito em C++ e pode ser alterado de acordo com as necessidades.</p>
+                <h5>Tech Stakcs: </h5>
+                <ul>
+                    <li class="list_skills">C/C++</li>
+                    <li class="list_skills">Vector, NSI, IOSTREAM</li>
+                </ul><br>
+                <a href="https://github.com/cvinicius369/Cyber-Brain" target="_blank">Ver no GitHub</a>
+            </div>
+            <span class="toggle-button">Ver Mais</span>
+        </div>
+        <div class="project-item" onclick="toggleProject(this)">
+            <h3><i class="fas fa-scroll"></i> RPG de Prompt</h3>
+            <p>Projeto de um jogo de RPG de prompt (cmd) inspirado na trilogia A sombra do corvo</p>
+            <div class="more-info">
+                <p>O mesmo ainda está em desenvolvimento e será refeito com as novas tecnologia que aprendi.</p>
+                <h5>Tech Stakcs: </h5>
+                <ul>
+                    <li class="list_skills">C#</li>
+                    <li class="list_skills">.NET core</li>
+                </ul><br>
+                <a href="https://github.com/cvinicius369/RPG_PROMPT_IN_CSHARP" target="_blank">Ver no GitHub</a>
+            </div>
+            <span class="toggle-button">Ver Mais</span>
+        </div>
+        <div class="project-item" onclick="toggleProject(this)">
+            <h3><i class="fas fa-leaf"></i> Spring Boot</h3>
+            <p>Projeto de desenvolvimento web requerido pela faculdade...</p>
+            <div class="more-info">
+                <p>O mesmo pode ser rodado no postman para testes e contém funções básicas como usuario, etc.</p>
+                <h5>Tech Stakcs: </h5>
+                <ul>
+                    <li class="list_skills">Java</li>
+                    <li class="list_skills">Spring Boot</li>
+                    <li class="list_skills">Postman (para testes)</li>
+                </ul><br>
+                <a href="https://github.com/cvinicius369/Spring_Boot_Java" target="_blank">Ver no GitHub</a>
+            </div>
+            <span class="toggle-button">Ver Mais</span>
+        </div>
+        <div class="project-item" onclick="toggleProject(this)">
+            <h3><i class="fas fa-leaf"></i> Sirius 3.1</h3>
+            <p>Prototypo de Assistente pessoal com inteligencia artificial usando C++...</p>
+            <div class="more-info">
+                <p>Atualização com interface web de versões anteriores que não tinham interface, porém o Sirius 3.1 ainda está em desenvolvimento.</p>
+                <h5>Tech Stakcs: </h5>
+                <ul>
+                    <li class="list_skills">Java</li>
+                    <li class="list_skills">Protocol HTTP</li>
+                    <li class="list_skills">Front End in HTML, CSS, JS</li>
+                </ul><br>
+                <a href="https://github.com/cvinicius369/Prototype_Sirius" target="_blank">Ver no GitHub</a>
+            </div>
+            <span class="toggle-button">Ver Mais</span>
+        </div>
+        <!-- Adicione mais projetos conforme necessário -->
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 - Caio Vinicius de Almeida Faguette</p>
+</footer>
+
+<script>
+    function toggleProject(element) {
+        element.classList.toggle("expanded");
+        const button = element.querySelector('.toggle-button');
+        if (element.classList.contains("expanded")) {
+            button.textContent = "Ver Menos";
+        } else {
+            button.textContent = "Ver Mais";
+        }
+    }
+</script>
+
 </body>
 </html>
